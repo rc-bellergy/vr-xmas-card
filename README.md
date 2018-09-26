@@ -19,3 +19,5 @@ Browser will auto reload when js, scss, html changed.
 
     gulp build
 
+## Testing page
+http://pms.dq.hk/inhouse/staffs/michael/vr-xmas/
