@@ -1,0 +1,13 @@
+@import "bootstrap/bootstrap";
+@import "fontawesome";
+// @import "/node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "mixin";
+@import "variables";
+@import "type";
+@import "basic";
+// components
+@import "components/header";
+@import "components/footer";
+@import "components/nav";
+// pages
+@import "pages/home";
