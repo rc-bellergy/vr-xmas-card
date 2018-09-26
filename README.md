@@ -1,6 +1,6 @@
 # What is it?
 
-It is a testing project to explore the solution of VR ecard using A-Frame
+It is a testing project to explore the solution of VR ecard using A-Frame and 360 pano photo.
 
 Included:
 - aframe
