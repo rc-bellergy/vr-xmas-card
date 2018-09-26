@@ -3,13 +3,22 @@ layout: default
 title: Home
 ---
 
+
+
 <a-scene>
 
+    <a-assets>
+      <img id="sky360" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
+      <img id="signage" src="assets/images/prudential-signage.png">
+    </a-assets>
+
     <!-- Add 360-degree image as sky -->
-    <a-sky id="image-360" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg"></a-sky>
+    <a-sky id="image-360" src="#sky360"></a-sky>
     <!-- Snow in here -->
     <a-entity position="0 2.25 -15" particle-system="preset: snow; particleCount: 5000"></a-entity>
     <!-- A testing object -->
     <a-sphere position="0 4 -2" radius="1.25" color="#EF2D5E"></a-sphere>
+
+    <a-image position = "0 1.5 -1" width="1" height="0.18" src="#signage"></a-box>
 
   </a-scene>
