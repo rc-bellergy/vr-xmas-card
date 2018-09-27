@@ -8,15 +8,24 @@ title: Home
     <a-assets>
       <img id="sky360" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
       <img id="signage" src="assets/images/prudential-signage.png">
+      <img id="street360" src="assets/images/street-view-360.jpg">
     </a-assets>
 
     <!-- Add 360-degree image as sky -->
-    <a-sky id="image-360" src="#sky360"></a-sky>
+    <a-sky id="image-360" src="#street360"></a-sky>
     <!-- Snow in here -->
-    <a-entity position="0 50 -5" particle-system="preset: snow; particleCount: 5000"></a-entity>
+    <a-entity position="0 50 -5" particle-system="preset: snow; particleCount: 3000; size:3; velocityValue: 0 4 0;" >
+      
+    </a-entity>
     <!-- A testing object -->
     <a-sphere position="0 4 -2" radius="1.25" color="#EF2D5E"></a-sphere>
     <!-- Company Signage -->
-    <a-image position="-1.68 0.64 -1.42" rotation="0 90 0" width="1" height="0.21" src="#signage"></a-box>
+    <a-image position="-1.68 0.64 -1.42" rotation="0 90 0" width="1" height="0.21" src="#signage">
+      <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"></a-animation>
+    </a-box>
 
   </a-scene>
