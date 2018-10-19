@@ -1,0 +1,48 @@
+---
+layout: default
+title: Home
+---
+
+<a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
+
+    <a-assets>
+      <img id="street360" src="assets/images/protected/street-view-1.jpg">
+      <img id="signage" src="assets/images/logo.png">
+      <img id="xmas" src="assets/images/xmas.png">
+    </a-assets>
+
+    <a-camera id="camera" rotation="7 63 0" fov="70"></a-camera>
+
+    <!-- Add 360-degree image as sky -->
+    <a-sky id="image-360" src="#street360"></a-sky>
+    <!-- Snow in here -->
+    <a-entity id="snow" position="0 50 -5" particle-system="preset: snow; particleCount: 3000; size:3; velocityValue: 0 4 0;" ></a-entity>
+    <!-- Company Signage -->
+    <a-image id="logo" position="-1.46 3 -0.74" rotation="0 63 0" scale="0.7 0.7 0.7" width="1" height="0.62" material="opacity:0;" src="#signage">
+        <a-animation attribute="position"
+          delay="1000"
+          dur="2000"
+          fill="forwards"
+          to="-1.46 2 -0.74"></a-animation>
+        <a-animation attribute="material.opacity"
+          delay="1000"
+          dur="2000"
+          fill="forwards"
+          to="1"></a-animation>
+    </a-image>
+
+    <a-image id="header" position="-1.46 1 -0.74" rotation="0 63 0" scale="1.2 1.2 1.2" width="1" height="0.276" material="opacity:0;" src="#xmas" >
+        <a-animation attribute="position"
+        delay="2000"
+        dur="2000"
+        fill="forwards"
+        to="-1.46 1.4 -0.74"></a-animation>
+        <a-animation attribute="material.opacity"
+        delay="2000"
+        dur="2000"
+        fill="forwards"
+        to="1"></a-animation>
+    </a-image>
+    
+
+  </a-scene>
